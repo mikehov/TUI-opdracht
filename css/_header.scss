@@ -1,0 +1,38 @@
+nav.navigation-header {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100vw;
+    height: 70px;
+    background-color: var(--blue-color);
+
+    z-index: 1;
+
+    & ul {
+        margin-left: auto;
+    }
+
+    & li {
+        display: inline-block;
+        padding: 0rem 2rem;
+        vertical-align: middle;
+    }
+
+    & .logo {
+        width: 3rem;
+    }
+
+    & .flag {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+    }
+
+    & span {
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+}

@@ -1,0 +1,7 @@
+nav.navigation-footer {
+    background-color: var(--blue-color);
+
+    & nav {
+        display: flex;
+    }
+}
