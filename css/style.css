@@ -12,12 +12,77 @@
 }
 
 nav.navigation-footer {
-  background-color: var(--blue-color);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: var(--blue-light-color);
 }
-nav.navigation-footer nav {
-  display: flex;
+nav.navigation-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav.navigation-footer li {
+  margin-bottom: 10px;
+}
+nav.navigation-footer li:first-child a {
+  font-family: "TUIType-Bold";
+  font-size: 2rem;
+  color: var(--red-color);
+}
+nav.navigation-footer a {
+  text-decoration: none;
+  transition: all ease 0.2s;
+}
+nav.navigation-footer a:hover {
+  color: var(--gray-color);
+  text-decoration: underline;
 }
 
+/* -- AMBIT FONT --*/
+@font-face {
+  font-family: "Ambit-Regular";
+  src: url(../font/Ambit-Regular.woff);
+}
+@font-face {
+  font-family: "Ambit-Italic";
+  src: url(../font/Ambit-Italic.woff);
+}
+@font-face {
+  font-family: "Ambit-Semibold";
+  src: url(../font/Ambit-Semibold.woff);
+}
+@font-face {
+  font-family: "Ambit-SemiboldItalic";
+  src: url(../font/Ambit-SemiboldItalic.woff);
+}
+@font-face {
+  font-family: "Ambit-Bold";
+  src: url(../font/Ambit-Bold.woff);
+}
+@font-face {
+  font-family: "Ambit-BoldItalic";
+  src: url(../font/Ambit-BoldItalic.woff);
+}
+/* -- TUITYPE FONT --*/
+@font-face {
+  font-family: "TUIType-Regular";
+  src: url(../font/TUITypeLt_LATN_W_Rg.woff);
+}
+@font-face {
+  font-family: "TUIType-Italic";
+  src: url(../font/TUITypeLt_LATN_W_It.woff);
+}
+@font-face {
+  font-family: "TUIType-Bold";
+  src: url(../font/TUITypeLt_LATN_W_Bd.woff);
+}
+@font-face {
+  font-family: "TUIType-BoldItalic";
+  src: url(../font/TUITypeLt_LATN_W_BdIt.woff);
+}
 nav.navigation-header {
   display: flex;
   position: fixed;
@@ -68,10 +133,21 @@ h2,
 h3,
 h4,
 p,
-a {
-  font-family: Arial, Verdana, sans-serif;
+a,
+form,
+button {
+  font-family: "TUIType", Arial, Verdana, sans-serif;
   text-decoration: none;
   color: var(--blue-dark-color);
+}
+
+button {
+  font-family: "TUIType-Bold";
+  font-size: 1rem;
+}
+
+h2 {
+  text-transform: uppercase;
 }
 
 #searching {
@@ -83,5 +159,63 @@ a {
 #searching img {
   width: 100vw;
   height: 220px;
-  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#searching .search ul {
+  display: flex;
+}
+#searching .search li {
+  padding: 1rem 2rem;
+  background-color: var(--blue-light-color);
+  transition: all ease 0.2s;
+}
+#searching .search li:hover {
+  background-color: var(--blue-color);
+}
+#searching .search li a {
+  font-family: "TUIType-Regular";
+  text-transform: uppercase;
+}
+#searching .search li:first-child {
+  background-color: var(--blue-color);
+}
+#searching .search li:first-child a {
+  color: var(--red-color);
+  border-bottom: 2px solid var(--red-color);
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--blue-color);
+  border-radius: 5px;
+}
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+form input[type=text] {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid var(--gray-light-color);
+  border-radius: 10px;
+  outline: none;
+}
+form button {
+  width: 100%;
+  height: 50px;
+  padding: 1rem;
+  color: var(--white-color);
+  background-color: var(--red-color);
+  border-radius: 10px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
