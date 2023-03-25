@@ -32,6 +32,12 @@ nav.navigation-header {
 
         &:first-child {
             padding: 0;
+            position: absolute;
+            left: 2rem;
+        }
+
+        &:last-child {
+            margin-right: 1rem;
         }
 
         &:hover {

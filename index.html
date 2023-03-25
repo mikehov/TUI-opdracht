@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -48,6 +49,7 @@
                     <li><a href="#">Cruises</a></li>
                     <li><a href="#">Meer reizen</a></li>
                 </ul>
+                <h1>Vind jouw <span>ideale vakantie</span></h1>
                 <form>
                     <div>
                         <label for="bestemming"><span
@@ -73,6 +75,7 @@
             </div>
             <div class="vakantietypes">
                 <ul>
+                    <span class="material-symbols-outlined">chevron_left</span>
                     <li><a href="#"><span class="material-symbols-outlined">search</span><span class="type">Alle
                                 vakanties</span><span class="number">(5241)</span></a></li>
                     <li><a href="#"><span class="material-symbols-outlined">emoji_objects</span><span class="type">All
@@ -93,19 +96,36 @@
                                 class="type">Wintersport</span><span class="number">(412)</span></a></li>
                     <li><a href="#"><span class="material-symbols-outlined">beach_access</span><span
                                 class="type">Zonvakantie</span><span class="number">(2684)</span></a></li>
+                    <span class="material-symbols-outlined">chevron_right</span>
                 </ul>
                 <div class="line"></div>
             </div>
         </section>
         <section id="resultaten">
             <h2>Resultaten vakantie<span class="number">(5245)</span></h2>
+            <ul class="breadcrumbs">
+                <li><a href="#">Vakantie <span class="material-symbols-outlined">chevron_right</span></a></li>
+                <li><a href="#">Resultaten</a></li>
+            </ul>
             <section class="filters">
                 <article>
-                    <h3>Aantal sterren</h3>
-                    <p>Dit is een stukje tekst</p>
+                    <h3><span class="material-symbols-outlined">expand_more</span>Aantal sterren<span
+                            class="material-symbols-outlined">star</span></h3>
+                    <div class="slider-container">
+                        <input type="range" min="1" max="5" step="1" value="3" class="slider" id="slider-1">
+                        <input type="range" min="1" max="5" step="1" value="4" class="slider" id="slider-2">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                    </div>
                 </article>
                 <article>
-                    <h3>Aantal sterren</h3>
+                    <h3><span class="material-symbols-outlined">expand_more</span>Beoordeling<span
+                            class="material-symbols-outlined">thumb_up</span></h3>
                     <div class="slider-container">
                         <p>beoordeling minimaal hoger dan:</p>
                         <input type="range" min="1" max="10" value="5" class="slider" id="slider">
@@ -124,38 +144,215 @@
                     </div>
                 </article>
                 <article>
-                    <h3>Aantal sterren</h3>
-                    <p>Dit is een stukje tekst</p>
+                    <h3><span class="material-symbols-outlined">expand_more</span>Verzorging<span
+                            class="material-symbols-outlined">restaurant</span></h3>
+                    <div class="checkboxes">
+                        <div>
+                            <input type="checkbox" id="all-inclusive" name="all-inclusive" value="all-inclusive">
+                            <label for="all-inclusive">All-Inclusive</label>
+                            <span class="info-icon"
+                                title="All-Inclusive betekent dat alle maaltijden, snacks en drankjes bij de prijs zijn inbegrepen."><span
+                                    class="material-symbols-outlined">info</span></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="volpension" name="volpension" value="volpension">
+                            <label for="volpension">Volpension</label>
+                            <span class="info-icon"
+                                title="Volpension betekent dat ontbijt, lunch en diner bij de prijs zijn inbegrepen."><span
+                                    class="material-symbols-outlined">info</span></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="halfpension" name="halfpension" value="halfpension">
+                            <label for="halfpension">Halfpension</label>
+                            <span class="info-icon"
+                                title="Halfpension betekent dat ontbijt en ofwel lunch of diner bij de prijs zijn inbegrepen."><span
+                                    class="material-symbols-outlined">info</span></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="logies" name="logies" value="logies">
+                            <label for="logies">Logies</label>
+                            <span class="info-icon"
+                                title="Logies betekent dat alleen de kamer bij de prijs is inbegrepen, geen maaltijden of drankjes."><span
+                                    class="material-symbols-outlined">info</span></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="logies-ontbijt" name="logies-ontbijt" value="logies-ontbijt">
+                            <label for="logies-ontbijt">Logies en Ontbijt</label>
+                            <span class="info-icon"
+                                title="Logies en Ontbijt betekent dat alleen de kamer en het ontbijt bij de prijs zijn inbegrepen, geen andere maaltijden of drankjes."><span
+                                    class="material-symbols-outlined">info</span></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h3><span class="material-symbols-outlined">expand_more</span>Vervoer<span
+                            class="material-symbols-outlined">flight</span></h3>
+                    <div class="checkboxes checkboxes-flight">
+                        <div class="left">
+                            <div>
+                                <input type="checkbox" id="vliegen" name="vliegen" value="vliegen">
+                                <label for="vliegen">Vliegen</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="amsterdam" name="amsterdam" value="amsterdam">
+                                <label for="amsterdam">Vanaf Amsterdam</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="rotterdam" name="rotterdam" value="rotterdam">
+                                <label for="rotterdam">Vanaf Rotterdam</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="eindhoven" name="eindhoven" value="eindhoven">
+                                <label for="eindhoven">Vanaf Eindhoven</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="groningen" name="groningen" value="groningen">
+                                <label for="groningen">Vanaf Groningen</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="brussel" name="brussel" value="brussel">
+                                <label for="brussel">Vanaf Brussel</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="antwerpen" name="antwerpen" value="antwerpen">
+                                <label for="antwerpen">Vanaf Antwerpen</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="dusseldorf" name="dusseldorf" value="dusseldorf">
+                                <label for="dusseldorf">Vanaf Düsseldorf</label>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div>
+                                <input type="checkbox" id="eigen-vervoer" name="eigen-vervoer" value="eigen-vervoer">
+                                <label for="eigen-vervoer">Eigen vervoer</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="trein" name="trein" value="trein">
+                                <label for="trein">Trein</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="bus" name="bus" value="bus">
+                                <label for="bus">Bus</label>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h3><span class="material-symbols-outlined">expand_more</span>Jouw ideale bedrijf<span
+                            class="material-symbols-outlined">check</span></h3>
+                    <div class="checkboxes">
+                        <div>
+                            <input type="checkbox" id="aan-het-strand" name="aan-het-strand" value="aan-het-strand">
+                            <label for="aan-het-strand">Aan het Strand</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="luxe" name="luxe" value="luxe">
+                            <label for="luxe">Luxe</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="kindvriendelijk" name="kindvriendelijk" value="kindvriendelijk">
+                            <label for="kindvriendelijk">Kindvriendelijk</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="design-trendy" name="design-trendy" value="design-trendy">
+                            <label for="design-trendy">Design & Trendy</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="karaktervol" name="karaktervol" value="karaktervol">
+                            <label for="karaktervol">Karaktervol</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="rust-comfort" name="rust-comfort" value="rust-comfort">
+                            <label for="rust-comfort">Rust & Comfort</label>
+                        </div>
+                        <a class="meer" href="#"><span class="material-symbols-outlined">expand_more</span>Meer</a>
+                    </div>
+                </article>
+                <article>
+                    <h3><span class="material-symbols-outlined">expand_more</span>Maximale prijs<span
+                            class="material-symbols-outlined"><span
+                                class="material-symbols-outlined">monetization_on</span></span></h3>
+                    <div class="max-price">
+                        <label for="rust-comfort">Per persoon</label>
+                        <select>
+                            <option value="geen-maximaal">geen maximaal</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                            <option value="500">500</option>
+                            <option value="750">750</option>
+                            <option value="1000+">1000+</option>
+                        </select>
+                        <label for="rust-comfort">Totaal</label>
+                        <select>
+                            <option value="geen-maximaal">geen maximaal</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                            <option value="500">500</option>
+                            <option value="750">750</option>
+                            <option value="1000+">1000+</option>
+                        </select>
+                    </div>
                 </article>
             </section>
+
             <section class="vakantie-resultaten">
                 <article>
-                    <img src="./img/nl.png" alt="Picture vacation">
+                    <div class="overlay-image">
+                        <img class="logo" src="./img/logo1.png" alt="logo">
+                        <span class="label">LAST MINUTE!</span>
+                        <span class="material-symbols-outlined heart">favorite</span>
+                        <span class="material-symbols-outlined circle">circle</span>
+                        <span class="material-symbols-outlined circle">circle</span>
+                        <span class="material-symbols-outlined circle">circle</span>
+                    </div>
+                    <img src="./img/image1.jpg" alt="Picture vacation">
+                    <div class="information">
+                        <h3>TIME TO SMILE Chogogo Dive & Beach Resort Curaçao</h3>
+                        <p>Appartementen
+                            <span class="material-symbols-outlined star">star</span>
+                            <span class="material-symbols-outlined star">star</span>
+                            <span class="material-symbols-outlined star">star</span>
+                            <span class="material-symbols-outlined star">star</span>
+                        </p>
+                        <p><span>Vakantie Curaçao</span><span
+                                class="material-symbols-outlined">chevron_right</span><span>Curaçao</span><span
+                                class="material-symbols-outlined">chevron_right</span><span>Jan Thiel Baai</span></p>
+                        <p><span class="price">932,</span>per persoon</p>
+                        <p><span class="grade">9,1</span><span class="material-symbols-outlined">thumb_up</span>515
+                            beoordelingen</p>
+                        <a href="#">Vergelijk deze accomodatie</a>
+                    </div>
+                    <ul>
+                        <li>Di 18 Apr 2023 <span>(9 dagen)</span></li>
+                        <li>Vanaf Amsterdam</li>
+                        <li>Logies</li>
+                        <li>Transfer</li>
+                    </ul>
+                    <button>Ontdek vakantie</button>
+                </article>
+                <article>
+                    <img src="./img/image1.jpg" alt="Picture vacation">
                     <h3>Titel</h3>
                     <p>Tekst met iets erin</p>
                 </article>
                 <article>
-                    <img src="./img/nl.png" alt="Picture vacation">
+                    <img src="./img/image1.jpg" alt="Picture vacation">
                     <h3>Titel</h3>
                     <p>Tekst met iets erin</p>
                 </article>
                 <article>
-                    <img src="./img/nl.png" alt="Picture vacation">
+                    <img src="./img/image1.jpg" alt="Picture vacation">
                     <h3>Titel</h3>
                     <p>Tekst met iets erin</p>
                 </article>
                 <article>
-                    <img src="./img/nl.png" alt="Picture vacation">
+                    <img src="./img/image1.jpg" alt="Picture vacation">
                     <h3>Titel</h3>
                     <p>Tekst met iets erin</p>
                 </article>
                 <article>
-                    <img src="./img/nl.png" alt="Picture vacation">
-                    <h3>Titel</h3>
-                    <p>Tekst met iets erin</p>
-                </article>
-                <article>
-                    <img src="./img/nl.png" alt="Picture vacation">
+                    <img src="./img/image1.jpg" alt="Picture vacation">
                     <h3>Titel</h3>
                     <p>Tekst met iets erin</p>
                 </article>
