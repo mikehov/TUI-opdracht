@@ -1,19 +1,24 @@
 nav.navigation-footer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
+    position: relative;
 
     margin-top: 4rem;
     padding: 2rem;
     background-color: var(--blue-light-color);
 
-    & ul {
+    ul {
         list-style: none;
         margin: 0;
         padding: 0;
+
+        li:first-child {
+            display: block;
+        }
     }
 
-    & li {
+    li {
         margin-bottom: 10px;
 
         &:first-child a {
@@ -23,13 +28,63 @@ nav.navigation-footer {
         }
     }
 
-    & a {
-        text-decoration: none;
+    a {
         transition: all ease 0.2s;
 
         &:hover {
             color: var(--gray-color);
-            text-decoration: underline;
         }
+    }
+
+    img {
+        width: 30px;
+        height: auto;
+        display: inline;
+    }
+
+    button {
+        background-color: var(--blue-color);
+        transition: all ease 0.3s;
+
+        &:hover {
+            background-color: var(--blue-dark-color);
+        }
+
+        img {
+            height: 15px;
+        }
+    }
+
+    .nieuwsbrief p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.img-horizontal li {
+    display: inline-block;
+}
+
+#footerbar {
+    background-color: var(--blue-color);
+    padding: 1.2rem;
+    text-align: right;
+    position: relative;
+
+    .awards {
+        width: 200px;
+        height: auto;
+
+        position: absolute;
+        margin: auto auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    img {
+        height: 1.5rem;
+        margin-right: 1.5rem;
+        transition: all ease 0.3s;
     }
 }

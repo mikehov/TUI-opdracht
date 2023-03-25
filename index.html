@@ -70,11 +70,99 @@
                     </div>
                     <button type="submit"><span class="material-symbols-outlined">search</span>Zoeken</button>
                 </form>
-
-
+            </div>
+            <div class="vakantietypes">
+                <ul>
+                    <li><a href="#"><span class="material-symbols-outlined">search</span><span class="type">Alle
+                                vakanties</span><span class="number">(5241)</span></a></li>
+                    <li><a href="#"><span class="material-symbols-outlined">emoji_objects</span><span class="type">All
+                                inclusive</span><span class="number">(1201)</span></a></li>
+                    <li><a href="#"><span class="material-symbols-outlined">directions_car</span><span
+                                class="type">Autovakanties</span><span class="number">(1881)</span></a></li>
+                    <li><a href="#"><span class="material-symbols-outlined">transportation</span><span
+                                class="type">Fly-drive vakanties</span><span class="number">(107)</span></a></li>
+                    <li><a href="#"><span class="material-symbols-outlined">timer</span><span class="type">Last
+                                minute</span><span class="number">(2713)</span></a></li>
+                    <li><a href="#"><span class="material-symbols-outlined">airport_shuttle</span><span
+                                class="type">Rondreizen</span><span class="number">(373)</span></a></li>
+                    <li><a href="#"><span class="material-symbols-outlined">location_city</span><span
+                                class="type">Stedentrip</span><span class="number">(636)</span></a></li>
+                    <li><a href="#"><span class="material-symbols-outlined">flight</span><span
+                                class="type">Vliegvakantie</span><span class="number">(3756)</span></a></li>
+                    <li><a href="#"><span class="material-symbols-outlined">ac_unit</span><span
+                                class="type">Wintersport</span><span class="number">(412)</span></a></li>
+                    <li><a href="#"><span class="material-symbols-outlined">beach_access</span><span
+                                class="type">Zonvakantie</span><span class="number">(2684)</span></a></li>
+                </ul>
+                <div class="line"></div>
             </div>
         </section>
+        <section id="resultaten">
+            <h2>Resultaten vakantie<span class="number">(5245)</span></h2>
+            <section class="filters">
+                <article>
+                    <h3>Aantal sterren</h3>
+                    <p>Dit is een stukje tekst</p>
+                </article>
+                <article>
+                    <h3>Aantal sterren</h3>
+                    <div class="slider-container">
+                        <p>beoordeling minimaal hoger dan:</p>
+                        <input type="range" min="1" max="10" value="5" class="slider" id="slider">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h3>Aantal sterren</h3>
+                    <p>Dit is een stukje tekst</p>
+                </article>
+            </section>
+            <section class="vakantie-resultaten">
+                <article>
+                    <img src="./img/nl.png" alt="Picture vacation">
+                    <h3>Titel</h3>
+                    <p>Tekst met iets erin</p>
+                </article>
+                <article>
+                    <img src="./img/nl.png" alt="Picture vacation">
+                    <h3>Titel</h3>
+                    <p>Tekst met iets erin</p>
+                </article>
+                <article>
+                    <img src="./img/nl.png" alt="Picture vacation">
+                    <h3>Titel</h3>
+                    <p>Tekst met iets erin</p>
+                </article>
+                <article>
+                    <img src="./img/nl.png" alt="Picture vacation">
+                    <h3>Titel</h3>
+                    <p>Tekst met iets erin</p>
+                </article>
+                <article>
+                    <img src="./img/nl.png" alt="Picture vacation">
+                    <h3>Titel</h3>
+                    <p>Tekst met iets erin</p>
+                </article>
+                <article>
+                    <img src="./img/nl.png" alt="Picture vacation">
+                    <h3>Titel</h3>
+                    <p>Tekst met iets erin</p>
+                </article>
+            </section>
+        </section>
     </main>
+
     <footer>
         <nav class="navigation-footer">
             <ul>
@@ -118,20 +206,36 @@
                 <li><a href="#">Klacht?</a></li>
                 <li><a href="#">Deel een zorg</a></li>
             </ul>
-            <div>
-                <h2>Nieuwsbrief</h2>
+            <div class="nieuwsbrief">
+                <li><a href="#">Nieuwsbrief</a></li>
                 <p>Krijg wekelijks de beste deals in je mailbox.</p>
                 <label for="bestemming"><span class="material-symbols-outlined">location_on</span>Bestemming?</label>
                 <input type="text" id="bestemming" name="bestemming" placeholder="Vakantie bestemming">
             </div>
-            <ul>
-                <li><img src="./img/nl.png" alt="Thuiswinkel waarborg logo"></li>
-                <li><img src="./img/nl.png" alt="ANVR logo"></li>
-                <li><img src="./img/nl.png" alt="SGR logo"></li>
-                <li><img src="./img/nl.png" alt="World logo"></li>
+            <ul class="img-horizontal">
+                <li><a href="#">Boeken met garantie</a></li>
+                <li><img src="./img/thuiswinkel.svg" alt="Thuiswinkel waarborg logo"></li>
+                <li><img src="./img/anvr.png" alt="ANVR logo"></li>
+                <li><img src="./img/sgr.svg" alt="SGR logo"></li>
+                <li><img src="./img/calamiteitenfonds.png" alt="World logo"></li>
             </ul>
-
+            <ul>
+                <li><a href="#">Vacatures</a></li>
+                <li><a href="#"><button>Werken bij TUI <img src="./img/tuismile.svg" alt="TUI Logo"></button></a></li>
+            </ul>
         </nav>
+        <div id="footerbar">
+            <img class="awards" src="./img/awards.png" alt="Awards 2022">
+            <ul class="img-horizontal">
+                <li><a href=""><img src="./img/facebook.svg"></a></li>
+                <li><a href=""><img src="./img/instagram.svg"></a></li>
+                <li><a href=""><img src="./img/linkedin.svg"></a></li>
+                <li><a href=""><img src="./img/pinterest.svg"></a></li>
+                <li><a href=""><img src="./img/twitter.svg"></a></li>
+                <li><a href=""><img src="./img/whatsapp.svg"></a></li>
+                <li><a href=""><img src="./img/youtube.svg"></a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 

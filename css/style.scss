@@ -17,18 +17,42 @@ h1,
 h2,
 h3,
 h4,
-p,
+button {
+    font-family: 'Ambit-Bold', Arial, Verdana, sans-serif;
+    text-decoration: none;
+    color: var(--blue-dark-color);
+}
+
 a,
 form,
-button {
-    font-family: 'TUIType', Arial, Verdana, sans-serif;
+label {
+    font-family: 'Ambit-Regular', Arial, Verdana, sans-serif;
     text-decoration: none;
+    color: var(--blue-dark-color);
+}
+
+p {
+    font-family: 'TUIType-Regular', Arial, Verdana, sans-serif;
     color: var(--blue-dark-color);
 }
 
 button {
     font-family: 'TUIType-Bold';
-    font-size: 1rem;
+    font-size: 1.2rem;
+
+    padding: 1rem 1.5rem;
+    background-color: var(--red-color);
+    color: var(--white-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 h2 {
@@ -36,12 +60,13 @@ h2 {
 }
 
 #searching {
+    display: grid;
     width: 100vw;
     height: auto;
     position: relative;
     margin-top: 70px;
 
-    & img {
+    img {
         width: 100vw;
         height: 220px;
         object-fit: cover;
@@ -49,14 +74,17 @@ h2 {
 }
 
 #searching .search {
-    // background-color: var(--blue-color);
+    width: 95%;
+    max-width: 1500px;
+    margin: auto auto;
+    margin-top: -7rem;
 
-    & ul {
+    ul {
         display: flex;
-        
+        margin-bottom: 0.5rem;
     }
 
-    & li {
+    li {
         padding: 1rem 2rem;
         background-color: var(--blue-light-color);
         transition: all ease 0.2s;
@@ -66,12 +94,12 @@ h2 {
         }
 
         a {
-            font-family: 'TUIType-Regular';
+            font-family: 'TUIType-Bold';
             text-transform: uppercase;
         }
     }
 
-    & li:first-child {
+    li:first-child {
         background-color: var(--blue-color);
 
         a {
@@ -85,37 +113,192 @@ form {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1rem;
-    max-width: 1500px;
 
     margin: 0 auto;
     padding: 1rem;
     background-color: var(--blue-color);
-    border-radius: 5px;
+    border-radius: 10px;
+}
 
-    & label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
-      
-      & input[type="text"] {
-        display: block;
-        width: 100%;
-        height: 50px;
-        padding: 10px;
-        border: 2px solid var(--gray-light-color);
-        border-radius: 10px;
-        outline: none;
-      }
-      
-      & button {
-        width: 100%;
-        height: 50px;
-        padding: 1rem;
-    
+input[type="text"] {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: 2px solid var(--gray-light-color);
+    border-radius: 10px;
+    outline: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    padding: 1rem;
+
+    color: var(--white-color);
+    background-color: var(--red-color);
+    border-radius: 10px;
+    cursor: pointer;
+    align-self: end;
+
+    transition: all ease 0.3s;
+
+    &:hover {
+        background-color: var(--blue-dark-color);
+    }
+
+    .material-symbols-outlined {
         color: var(--white-color);
-        background-color: var(--red-color);
-        border-radius: 10px;
-        cursor: pointer;
-      }
-  }
+        margin-right: 0.5rem;
+    }
+}
+
+#searching .vakantietypes {
+    text-align: center;
+    background-color: var(--white-color);
+    margin-top: 1rem;
+
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0rem 1rem;
+
+        & a:hover {
+            text-decoration: none;
+        }
+
+        .type {
+            font-family: 'TUIType-Bold';
+            font-size: 18px;
+        }
+
+        .number {
+            font-size: 12px;
+            color: var(--gray-color);
+        }
+    }
+
+    span {
+        display: block;
+    }
+
+    .line {
+        width: 95%;
+        height: 2px;
+        max-width: 1500px;
+
+        margin: auto;
+        margin-top: 1rem;
+        background-color: var(--gray-light-color);
+        display: block;
+    }
+}
+
+#resultaten {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    max-width: 1500px;
+    margin: auto;
+    position: relative;
+    margin-top: 3rem;
+
+    h2 {
+        text-align: center;
+        flex-basis: 100%;
+        margin-bottom: 1.5rem;
+
+        span {
+            display: block;
+            font-size: 1rem;
+            color: var(--red-color);
+        }
+    }
+
+    .filters {
+        background-color: blue;
+        width: 400px;
+
+        h3 {
+            padding: 1rem;
+            background-color: var(--blue-light-color);
+        }
+
+        article {
+            background-color: var(--gray-light-color);
+
+            p {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .slider-container {
+                padding: 1rem;
+            }
+    
+            .slider {
+                -webkit-appearance: none;
+                width: 100%;
+                height: 10px;
+                background-color: #ddd;
+                border-radius: 10px;
+                outline: none;
+                margin-bottom: 1rem;
+              }
+    
+              .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 20px;
+                height: 20px;
+                background-color: #2196F3;
+                border-radius: 50%;
+                cursor: pointer;
+              }
+              
+              .slider::-moz-range-thumb {
+                width: 20px;
+                height: 20px;
+                background-color: #2196F3;
+                border-radius: 50%;
+                cursor: pointer;
+              }
+              
+              .slider-labels {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+              }
+              
+              .slider-labels span {
+                flex: 1;
+                text-align: center;
+                font-size: 0.8rem;
+                color: #999;
+              }
+        }
+    }
+
+    .vakantie-resultaten {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(50%, 300px), 1fr));
+        gap: 1rem;
+        background-color: red;
+    }
+}
