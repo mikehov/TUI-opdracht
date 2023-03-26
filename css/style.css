@@ -15,6 +15,7 @@
 nav.navigation-footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(4, auto);
   gap: 1rem;
   position: relative;
   margin-top: 4rem;
@@ -464,11 +465,15 @@ button .material-symbols-outlined {
   /* slider related */
 }
 #resultaten .filters article h3 {
+  position: relative;
   padding: 1rem;
   background-color: var(--blue-light-color);
+  display: flex;
+  align-items: center;
 }
 #resultaten .filters article h3 span:last-child {
-  float: right;
+  position: absolute;
+  right: 1rem;
 }
 #resultaten .filters article p {
   text-align: center;
@@ -705,6 +710,10 @@ button .material-symbols-outlined {
 }
 #resultaten .vakantie-resultaten article .information {
   padding: 1rem;
+}
+#resultaten .vakantie-resultaten article .gray-information {
+  bottom: 0;
+  width: 100%;
 }
 #resultaten .vakantie-resultaten article .place {
   font-size: 14px;

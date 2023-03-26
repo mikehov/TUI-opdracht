@@ -309,11 +309,15 @@ button {
             margin-bottom: 1.5rem;
 
             h3 {
+                position: relative;
                 padding: 1rem;
                 background-color: var(--blue-light-color);
+                display: flex;
+                align-items: center;
 
                 span:last-child {
-                    float: right;
+                    position: absolute;
+                    right: 1rem;
                 }
             }
 
@@ -604,6 +608,11 @@ button {
 
             .information {
                 padding: 1rem;
+            }
+
+            .gray-information {
+                bottom: 0;
+                width: 100%;
             }
 
             .place {
